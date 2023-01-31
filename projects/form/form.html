@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+  <style>
+   ul { 
+        list-style-type: none;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal information</legend>
+            <ul>
+                <li>
+                    <label for="full name">Full name</label>
+                    <input type="text" name="full name" id="full name" required>
+                </li>
+                
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </li>
+                <li>
+                    <label for="address">Home address</label>
+                    <input type="text" name="address" id="address" maxlength="50">
+                </li>
+                <li>
+                    <label for="telephone">phone number</label>
+                    <input type="tel" name="tel" id="telephone" required
+                    placeholder="080********">
+                </li>
+                <li>
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date" name="date" id="DOB" required>
+                </li>
+               
+            </ul>
+        </fieldset>
+<br>
+        <fieldset>
+            
+            <legend>Other Information</legend>
+            <ul>
+                <li>
+                <h3> Gender </h3>
+                
+                   
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" id="male"> 
+
+                    <label for="female">female</label>
+                    <input type="radio" name="gender" id="female">
+                </li>
+                <li>
+                <h3>Marital status</h3>
+               
+                    <label for="single">single</label>
+                    <input type="radio" name="mar" id="single" checked>
+
+                    <label for="married">married</label>
+                    <input type="radio" name="mar" id="married">
+
+                    <label for="divorce">Divorced</label>
+                    <input type="radio" name="mar" id="divorce">
+
+                    <label for="widowed">Widow</label>
+                    <input type="radio" name="mar" id="widowed">
+                </li>
+                <li>
+                <h3>State of Origin</h3>
+                    <select>
+                        
+                        <option value="se">select your state</option>
+                
+                        <optgroup label="SouthEast">
+                        <option value="abia">Abia</option>
+                        <option value="anambra">Anambra</option>
+                        <option value="imo">Imo</option>
+                        <option value="Enugu">Enugu</option>
+                        <option value="Ebonyi">Ebonyi</option>
+                        </optgroup>                           
+                        <optgroup label="SouthWest">    
+                        <option value="od">Ondo</option>
+                        <option value="og">Ogun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="lagos">Lagos</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Ekiti">Ekiti</option>
+                        </optgroup>                           
+                    </select>
+                </li>
+                <li>
+                    <label for="upload">upload files</label>
+                    <input type="file" name="upload" id="upload" multiple
+                    accept="image/*,.pdf">
+                </li>
+                <li>
+                    <label for="desc">Describe yourself</label>
+                    <textarea name="desc" id="desc"></textarea> 
+                </li>
+                <li>
+                    <label>stack</label><br>
+                    <input type="checkbox" name="skii" id="re">
+                    <label for="re">react</label>
+
+                    <input type="checkbox" name="angular" id="angular">
+                    <label for="angular">angular</label>
+
+                    <input type="checkbox" name="html" id="html">
+                    <label for="html">HTML</label>
+                 
+                    <input type="checkbox" name="css" id="css">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" name="python" id="css">
+                    <label for="python">Python</label>
+
+                    <input type="checkbox" name="js" id="css">
+                    <label for="js">JavaScript</label>
+
+
+                </li>
+                
+            </ul>
+        </fieldset>
+                     <input type="submit" value="send data">
+                    <button type="submit">submit</button>
+    </form>
+</body>
+</html>
