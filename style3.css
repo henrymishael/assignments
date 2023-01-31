@@ -9,13 +9,13 @@ body{
 main{
     font-size: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 137px);
-    grid-template-areas: "a a b b c"
-                         "a a d d e"
-                         "g g f f f"
-                         "h h f f f"
-                         "i i i i i";
+    grid-template-areas: "a a b c"
+                         "a a d e"
+                         "g g f f"
+                         "h h f f"
+                         "i i i i";
     gap: 10px;
 }
 
