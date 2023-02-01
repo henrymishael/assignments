@@ -1,5 +1,5 @@
 body{
-    background-color: #ffffff;
+    background-color: #d6f7f2;
 }
 
 main{
@@ -15,8 +15,15 @@ main{
                          "f g g d d";
 }
 
+
 section{
-    background-color: #81331a;
+    background-color: #950714;
+    
+}
+
+.third{
+    background-color: blue;
+    grid-area: c;
 }
 
 section:nth-of-type(1){
