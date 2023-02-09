@@ -4,7 +4,7 @@ section{
     border-bottom:3px solid;
 } 
 main > section:first-of-type{
-    background-image: url(/large/oaax18kaapkokaro.jpg);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg);
     background-color: rgba(0, 0, 0, 0.795);
     background-blend-mode: overlay;
     font-family: 'Cabin', sans-serif;
@@ -270,7 +270,7 @@ footer{
     color:black;
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
     /* section div.nav-links{
         flex-direction: column;
         justify-content: space-between;
