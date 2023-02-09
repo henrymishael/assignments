@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;1,600&family=Roboto:ital@1&display=swap');
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-color: rgb(235, 255, 56);
+    /* padding: 3em; */
+    height: 3em;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    position:fixed;
+    top: 0;
+    right:0;
+    left:0;
+    color:black;
+    
+}
+main{
+    position: relative;
+    top:3em;
+    z-index: -1;
+    background-color: rgb(46, 45, 45);
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+p{
+    font-family: 'Cabin', sans-serif;
+}
+.navlinks ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background: red;
+    display:block;
+    margin: auto;
+    transition :0.5s;
+}
+.navlinks ul li:hover::after{
+    width:100%;
+}
+.navlinks ul li:hover{
+    background-color: rgb(255, 254, 254);
+}
+
+@media(max-width:700px) {
+    ul{
+        flex-direction: column;
+        height: 3em;
+        padding: 5em;
+        top:-40px;
+        align-items: left;
+    }
+    li{
+        padding:.5em 0;
+    }
+    main{
+        position: relative;
+        top:12em;
+
+    }
+   
+}
+    
+
+
+

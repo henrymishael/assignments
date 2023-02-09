@@ -8,8 +8,10 @@ main{
     margin: 0 auto;
     border-radius: 20px 20px 20px 20px;
     margin-top: 0 auto;
-    height: 500px;
-    background-image: url(/large/blurred_blue_184356.jpg);
+    height: 670px;
+    background-image: url(https://images.all-free-download.com/images/graphiclarge/blurred_blue_184356.jpg);
+    background-color: rgba(0, 0, 0, 0.589);
+    background-blend-mode: overlay;
   
 }
 
@@ -40,7 +42,6 @@ button:hover{
 
 label.id{
     margin:35% 0 0 53%;
-    
     -webkit-text-fill-color: #81331a;
 }
 
