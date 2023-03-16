@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ROMAN NUMERAL CONVERTER</h1>
+    <main>
+        <div>
+            
+            <input type="num" name="num" id="num" min="1" max="3999" placeholder="Input number"><br><br>
+            <button>CONVERT</button>
+        </div>
+        <div>
+
+        </div>
+    </main> 
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', Convert)
+        let para1 = document.createElement('p')
+        let div = document.querySelectorAll('div')
+        div[1].appendChild(para1)
+        let input = document.querySelector('input')
+        function Convert(num){
+            // let para1 = document.createElement('p')
+            // let div = document.querySelector('div')
+            // div.appendChild(para1)
+            // let input = document.querySelector('input')
+            num = input.value
+           
+            
+            let u = ['', 'i','ii','iii','iv','v', 'vi', 'vii','viii','ix']
+            let t = ['','x','xx','xxx','xl', 'l', 'lx','lxx', 'lxxx','xc']
+            let h = ['', 'c','cc','ccc','cd','d','dc','dcc','dccc','cm']
+            let th = ['', 'm','mm','mmm']
+           
+           
+          
+
+            if (num.length === 4){
+                 num = th[num[0]] + h[num[1]] + t[num[2]] + u[num[3]]
+             }
+             else if (num.length === 3){
+                 num = h[num[0]] + t[num[1]] + u[num[2]]
+             }
+             else if (num.length === 2){
+                 num = t[num[0]] + u[num[1]]
+             }
+             else {
+                 num = u[num[0]]}
+            // num.length === 4 ? num = th[num[0]] + h[num[1]] + t[num[2]] + u[num[3]] : num.length === 3 ? num = h[num[0]] + t[num[1]] + u[2] : num.length === 2 ? num = t[num[0]] + u[num[1]] : num = u[num[0]]
+
+            num = num.toUpperCase()
+            para1.textContent = num
+        //    num = num.toString()
+
+            }
+            
+        
+                
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ucFirst(name){
+            // let ve = name.toLowerCase()
+            // let sm = ve.slice(1, ve.length)
+            // let nw = ve[0]
+            // let vee = nw.toUpperCase()
+            // let nm = `${vee}${sm}`
+            // return nm
+            let result = name.toLowerCase().replace(name[0], name[0].toUpperCase())
+            return result
+        } 
+       alert(ucFirst('hENrY'))
+    </script>
+
+</body>
+</html>

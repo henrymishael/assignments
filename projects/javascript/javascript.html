@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+
+    <style>
+        ul{
+            font-size:2.5em;
+        }
+
+        .two, .four{
+            color:white;
+        }
+        
+        p{
+            font-size:1.5em;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Impossibility</p>
+    <p>is</p>
+    <p>Past</p>
+    <p>Tense</p>
+    <ul>
+        <li class="one">FRONT_END</li>
+        <li class="two">HTML</li>
+        <li class="two one">CSS</li>
+        <li class="four">Java</li>
+        <li class="four">React</li>
+    </ul>
+    <script>
+        let mishael = document.querySelector('body')
+        mishael.style.backgroundColor = 'red'
+
+        let henry = document.querySelectorAll('p')
+        henry[1].style.backgroundColor = '#fff'
+
+        let class1 = document.getElementsByClassName('four')
+        class1[1].style.backgroundColor = '#000'
+        class1[1].style.border = '.3em solid #000'
+
+        
+
+        let one = document.querySelectorAll('.one')
+        one[0].style.color='blue'
+        one[1].style.color ='yellow'
+
+        let four = document.querySelectorAll('.four')
+        four[0].style.color='green'
+        four[1].style.color='white'
+
+        let heading = document.createElement('h1')
+        mishael.appendChild(heading)
+
+        heading.textContent = 'This is my universe and you are in my black hole'
+        
+        
+    </script>
+</body>
+</html>

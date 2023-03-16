@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <label for="num">number of students</label>
+        <input type="number" name="num" id="num" min="1" max="20"> 
+
+        <button>enter</button>
+        <button>reset</button>
+
+
+        <p>we have <span></span> <span></span> present</p>
+    </main>
+    <script>
+        let num = document.getElementById("num")
+        let btn = document.querySelectorAll("button")
+        let number = document.querySelector("#num")
+
+        btn[0].style.backgroundColor = "#f1c"
+        btn[1].style.backgroundColor = "#ff0"
+        let para = document.querySelector('p')
+        let span = document.querySelectorAll('span')
+
+        // span[0].addEventListener('click', hello)
+        // span[1].addEventListener('click', hello)
+
+
+
+        btn[0].addEventListener('click', hello)
+        
+        function hello(){
+            para.style.display = 'block'
+
+            span[0].textContent = num.value
+            span[1].textContent = (num.value) === '1' ? 'student' : 'students'
+            console.log(num.value)
+            
+        }
+        
+    </script>
+</body>
+</html>
