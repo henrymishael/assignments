@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-[#ffe711]">
+    <h1 class="text-center text-2xl border-b-2">BMI CALCULATOR</h1>
+    <main class="flex h-screen sm:flex-row">
+        <!-- <div class="border-2 shadow-black border-blue-900 h-[300px] w-[200px] m-auto  rounded-[16px]">
+
+        </div> -->
+        <div class="border-2 shadow-black border-blue-900 h-[500px] w-[400px] m-auto mt-3 rounded-[16px] flex flex-col items-center bg-[#0f172a]">
+            <label class="mx-3 text-white" for="num">WEIGHT</label>
+        <input class="mx-3 my-3 w-[250px] " type="number" name="weight" id="weight" placeholder="weight in kg"> <br>
+        <label class="mx-3 text-white"for="num">HEIGHT</label>
+        <input class="mx-3 my-3 w-[250px] " type="number" name="height" id="height" placeholder="height in cm"> <br>
+        <button class="bg-white py-2 px-6 rounded-[5px] mt-5 hover:text-slate-800 hover:bg-white"> Calculate</button>
+         </div>
+     <div class="text-white border-2 shadow-black border-blue-900 m-auto h-[500px] w-[400px] rounded-[16px]  mt-3 text-center flex flex-col items-center bg-[#0f172a]">
+        <h2 class="text-xl ">BMI</h2>
+        
+        
+       </div>
+    </main>
+    <script>
+        let para1 = document.createElement('p')
+        let para2 = document.createElement('p')
+        // let ul = document.createElement('ul')
+        let li1 = document.createElement('li')
+        let li2 = document.createElement('li')
+        let li3 = document.createElement('li')
+        let li4 = document.createElement('li')
+        let li5 = document.createElement('li')
+        let li6 = document.createElement('li')
+       let div = document.querySelectorAll('div')
+       let superText = '2'
+       
+          
+       div[1].appendChild(para1)
+       div[1].appendChild(para2)
+       div[1].appendChild(li1)
+       div[1].appendChild(li2)
+       div[1].appendChild(li3)
+       div[1].appendChild(li4)
+       div[1].appendChild(li5)
+       div[1].appendChild(li6)
+       
+       
+
+      
+      let btn = document.querySelector('button')
+      para1 = document.querySelector('p')
+      li1 = document.querySelector('li')
+    //   li2 = document.querySelector('li')
+    //   li3 = document.querySelector('li')
+    //   li4 = document.querySelector('li')
+    //   li5 = document.querySelector('li')
+    //   li6 = document.querySelector('li')
+      btn.addEventListener('click', BMI)
+        
+    function BMI(){
+        let input = document.querySelectorAll('input')
+        let weight = input[0].value
+        let height = input[1].value
+        para1.textContent = Number((weight/((height/100)**2)).toFixed(2))
+           
+        
+        if(para1.textContent >= 30.00){{
+            return para2.textContent = 'Obese-weight range', para2.style.backgroundColor = 'red', li1.textContent = 'Reduce your Cholestero intake', li2.textContent = 'Dietary Changes', li3.textContent = 'exercise and activity', li4.textContent = 'Behavioral changes', li5.textContent = 'weight loss medication', li6.textContent = 'weight loss Surgery'}}
+        else if(para1.textContent > 25.00){{
+            return para2.textContent = 'Over-weight range', para2.style.backgroundColor = 'yellow',  li1.textContent = 'Reduce your Cholestero intake', li2.textContent = 'Dietary Changes', li3.textContent = 'exercise and activity', li4.textContent = 'Behavioral changes', li5.textContent = 'weight loss medication', li6.textContent = 'weight loss Surgery'}}
+        else if(para1.textContent >= 18.50){
+            return para2.textContent = 'Healthy-Weight range', para2.style.backgroundColor = 'green', li1.textContent = 'Very good, keep it up'}
+        else {
+            return para2.textContent = 'Under-weight range', para2.style.backgroundColor = 'brown', li1.textContent = 'Eat 5 portions of fruits daily', li2.textContent = 'Increase your daily intake of proteins', li3.textContent = 'Chose unsaturated oil and spreads e.g sunflower', li4.textContent = 'Base your meals on starchy carbohydrates', li5.textContent = 'Having some dairy or dairy alternatives', li6.textContent = 'Drink lots of fluids'}
+    }
+                
+                
+                
+    
+
+
+        
+
+        
+
+       
+
+
+      
+      
+
+
+
+    </script>
+
+    
+</body>
+</html>

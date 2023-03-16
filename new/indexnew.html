@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="bg-slate-900">
+    <h1 class="text-center text-white text-3xl ">ROT 13 CIPHER</h1>
+    <main class="mt-[10px] flex flex-col items-center ">
+        <div class="bg-red-700 w-[500px] h-[500px] rounded-[30px] flex flex-col items-center justify-center">
+            <input type="text" id="text" name="text" class="w-[300px] h-[40px] bg-slate-300"> 
+            <button class=" mt-[25px] w-[250px] h-[50px] bg-white rounded-[10px] hover:text-white hover:bg-black font-bold ">ENCODE</button>
+            <div class="mt-[35px] w-[300px] h-[100px] bg-slate-300">
+
+            </div>
+        </div>
+           
+        
+    </main>
+
+    <script>
+        let input = document.querySelector('input')
+        input.addEventListener('change', rot)
+        let para = document.createElement('p')
+        let div = document.querySelectorAll('div')
+        div[1].appendChild(para)
+        
+        console.log(input.value)
+
+        function rot(e) {
+            let str = e.target.value
+            str = str.toUpperCase()
+            let aph1 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
+            let aph2 = ['N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+            let arr = []
+            let regex = /[a-z]/i
+            for(let x = 0; x < str.length; x++){
+                if(regex.test(str[x])){
+                    if(aph1.includes(str[x])){
+                        arr.push(aph2[aph1.indexOf(str[x])])
+                    }
+                    else{
+                        arr.push(aph1[aph2.indexOf(str[x])])
+                    }
+                }
+            
+                else{
+                     arr.push(str[x])
+                }
+                
+           }
+           return para.textContent = arr.join('')
+        }
+        
+
+   
+    </script>
+    
+</body>
+</html>
