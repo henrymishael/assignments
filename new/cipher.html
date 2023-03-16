@@ -11,9 +11,9 @@
     <h1 class="text-center text-white text-3xl ">ROT 13 CIPHER</h1>
     <main class="mt-[10px] flex flex-col items-center ">
         <div class="bg-red-700 w-[500px] h-[500px] rounded-[30px] flex flex-col items-center justify-center">
-            <input type="text" id="text" name="text" class="w-[300px] h-[40px] bg-slate-300"> 
-            <button class=" mt-[25px] w-[250px] h-[50px] bg-white rounded-[10px] hover:text-white hover:bg-black font-bold ">ENCODE</button>
-            <div class="mt-[35px] w-[300px] h-[100px] bg-slate-300">
+            <input type="text" id="text" name="text" class=" border-none outline-none w-[300px] h-[40px] bg-[#0000007f] .placeholder-transparent .placeholder-items-center pl-[105px] text-white" placeholder ="Input Here"> 
+            
+            <div class="mt-[35px] w-[300px] h-[100px] bg-[#00000089] text-white text-center flex justify-center items-center">
 
             </div>
         </div>
@@ -28,7 +28,7 @@
         let div = document.querySelectorAll('div')
         div[1].appendChild(para)
         
-        console.log(input.value)
+       
 
         function rot(e) {
             let str = e.target.value
